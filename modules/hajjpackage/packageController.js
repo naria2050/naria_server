@@ -19,6 +19,7 @@ exports.createPackage = async (req, res) => {
   }
 };
 
+
 exports.getPackageById = async (req, res) => {
   try {
     const packageId = req.params.id;
@@ -28,6 +29,7 @@ exports.getPackageById = async (req, res) => {
     res.status(404).json({ success: false, message: error.message });
   }
 };
+
 
 exports.updatePackage = async (req, res) => {
   try {
@@ -39,6 +41,7 @@ exports.updatePackage = async (req, res) => {
     res.status(500).json({ success: false, message: error.message });
   }
 };
+
 
 exports.deletePackage = async (req, res) => {
   try {

@@ -17,12 +17,12 @@ app.use(require('body-parser').json());
 connectDB();
 
 // Routes
-const packageRoutes = require('./modules/package/packageRoutes');
-// const bookingRoutes = require('./modules/booking/bookingRoutes');
+const packageRoutes = require('./modules/hajjpackage/packageRoutes');
+const TourbookingRoutes = require('./modules/Tourpackage/TourPackageRouter');
 // const userRoutes = require('./modules/user/userRoutes');
 
 app.use('/api/packages', packageRoutes);
-// app.use('/api/bookings', bookingRoutes);
+app.use('/api/tours', TourbookingRoutes);
 // app.use('/api/users', userRoutes);
 
 // Server
