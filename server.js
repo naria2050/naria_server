@@ -19,11 +19,13 @@ connectDB();
 // Routes
 const packageRoutes = require('./modules/hajjpackage/packageRoutes');
 const TourbookingRoutes = require('./modules/Tourpackage/TourPackageRouter');
-// const userRoutes = require('./modules/user/userRoutes');
+const userRoutes = require('./modules/user/userRoutes');
+const AuthRoutes = require('./modules/user/authRouter');
 
 app.use('/api/packages', packageRoutes);
 app.use('/api/tours', TourbookingRoutes);
-// app.use('/api/users', userRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/auth', AuthRoutes);
 
 // Server
 const PORT = process.env.PORT || 5000;
